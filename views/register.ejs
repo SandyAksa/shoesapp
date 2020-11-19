@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Selamat datang</h1>
+    <h2>yuk masukkan data diri kamu di sini!</h2>
+
+    <form action="/register" method="POST">
+        <div>
+            <label for="firstname">firstname:</label>
+            <input type="text" name="firstname">
+        </div>
+
+        <div>
+            <label for="lastname">lastname:</label>
+            <input type="text" name="lastname">
+        </div>
+
+        <div>
+            <label for="username">username:</label>
+            <input type="text" name="username">
+        </div>
+
+        <div>
+            <label for="email">email:</label>
+            <input type="text" name="email">
+        </div>
+
+        <div>
+            <label for="password">password:</label>
+            <input type="text" name="password">
+        </div>
+    
+        <button type="submit">submit</button>
+        <a href="/">cancel</a>
+    </form>
+</body>
+</html>

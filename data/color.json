@@ -1,0 +1,22 @@
+[
+    {
+        "name": "black",
+        "stock": 100
+    },
+    {
+        "name": "white",
+        "stock": 100
+    },
+    {
+        "name": "yellow",
+        "stock": 100
+    },
+    {
+        "name": "blue",
+        "stock": 100
+    },
+    {
+        "name": "red",
+        "stock": 100
+    }
+]

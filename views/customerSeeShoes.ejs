@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Shoes</title>
+</head>
+<body>
+    <%- include('partials/_navbar.ejs') %>
+
+    <h1>See Shoes</h1>
+    
+    <table border=1>
+        <tr>
+            <th>Shoes ID</th>
+            <th>Type ID</th>
+            <th>Color ID</th>
+        </tr>
+
+        <% for(i=0;i<customers.Shoes.length;i++){ %>
+            <tr>
+                <td><%= customers.Shoes[i].id %></td>
+                <td><%= customers.Shoes[i].TypeId %></td>
+                <td><%= customers.Shoes[i].ColorId %></td>
+            </tr>
+        <% } %> 
+    </table>
+</body>
+</html>

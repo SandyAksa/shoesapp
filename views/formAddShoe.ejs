@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Shoe</title>
+</head>
+<body>
+    <h1>Customize your own shoes</h1>
+
+    <!-- <form action="/shoes/add" method="POST">
+        <label for="TypeId">Type</label> <br>
+        <select name="TypeId">
+            <option selected disabled>--- Select Type ---</option>
+            <% types.forEach((e)=>{ %>
+            <option value="<%=e.id %>"> <%= e.name %> </option>
+            <% }) %>
+        </select>
+        <br>
+        <label for="ColorId">Color</label> <br>
+        <select name="ColorId">
+            <option selected disabled>--- Select Color ---</option>
+            <% colors.forEach((e)=>{ %>
+            <option value="<%=e.id %>"> <%= e.name %> </option>
+            <% }) %>
+        </select>
+        <br><br>       
+        <input type="submit" value="Save">
+        <a href="/">Cancel</a>
+    </form>   -->
+
+    <form action="/shoes/add" method="POST">
+        <label for="TypeId">Type</label> <br>
+        <select name="TypeId">
+            <option selected disabled>--- Select Type ---</option>
+            <% types.forEach((e)=>{ %>
+            <option value="<%=e.id %>"> <%= e.name %> </option>
+            <% }) %>
+        </select>
+        <br>
+        <label for="ColorId">Color</label> <br>
+        <select name="ColorId">
+            <option selected disabled>--- Select Color ---</option>
+            <% colors.forEach((e)=>{ %>
+            <option value="<%=e.id %>"> <%= e.name %> </option>
+            <% }) %>
+        </select>
+        <br><br>       
+        <input type="submit" value="Save">
+        <a href="/">Cancel</a>
+    </form>
+</body>
+</html>

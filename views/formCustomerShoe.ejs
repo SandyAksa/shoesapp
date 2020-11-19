@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add customer shoe</title>
+</head>
+<body>
+    <%- include('partials/_navbar.ejs') %>
+    <br><br>
+
+    <form action="/shoes/addcustomer/<%= shoes.id %>" method="POST">
+        <div>
+            <label for="ShoeId">Shoes ID</label>
+            <h1><%= shoes.id %></h1>
+            <input type="number" name="ShoeId" value="<%= shoes.id %>">
+        </div>
+        <div>
+            <label for="CustomerId">Customer</label>
+            <select name="CustomerId">
+                <% for(i = 0; i < customers.length ; i++) { %>
+                <option value="<%= customers[i].id %>"><%= customers[i].name %></option>
+                <% } %>  
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Save">
+            <a href="/shoes">Cancel</a>
+        </div>
+    </form>
+
+    <h1>Lists of Customers for This Item</h1>
+
+    <table border=1>
+        <tr>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+        </tr>
+
+        <% for (let i = 0; i < shoes.Customers.length; i++) { %>
+            <tr>
+                <td><%= shoes.Customers[i].id %></td>
+                <td><%= shoes.Customers[i].name %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

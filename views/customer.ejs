@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+</head>
+<body>
+    <%- include('partials/_navbar.ejs') %>
+    
+    <h1>List of Customers</h1>
+    <a href="/customers/add">add new customer</a>
+
+    <table border=1>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+
+        <% for (let i = 0; i < customers.length; i++) { %>
+            <tr>
+                <td><%= customers[i].id %></td>
+                <td><%= customers[i].name %></td>
+                <td><%= customers[i].email %></td>
+                <td><%= customers[i].phone %></td>
+                <td>
+                    <a href="/customers/seeshoes/<%= customers[i].id %>">See Shoes</a>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

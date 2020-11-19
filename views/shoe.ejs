@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+</head>
+<body>
+    <%- include('partials/_navbar.ejs') %>
+    
+    <h1>List of Sold Shoes</h1>
+
+    <table border=1>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Action</th>
+        </tr>
+
+        <% for (let i = 0; i < shoes.length; i++) { %>
+            <tr>
+                <td><%= shoes[i].id %></td>
+                <td><%= (shoes[i].TypeId) ? types[shoes[i].TypeId-1].name : "" %></td>
+                <td><%= (shoes[i].ColorId) ? colors[shoes[i].ColorId-1].name : "" %></td>
+                <td>
+                    <a href="/shoes/addcustomer/<%= shoes[i].id %>">Buy This Item</a>
+                </td>
+            </tr>
+        <% } %> 
+    </table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types</title>
+</head>
+<body>
+    <%- include('partials/_navbar.ejs') %>
+    
+    <h1>List of Types</h1>
+
+    <table border=1>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Stock</th>
+            <th>Action</th>
+        </tr>
+
+        <% for (let i = 0; i < types.length; i++) { %>
+            <tr>
+                <td><%= types[i].id %></td>
+                <td><%= types[i].name %></td>
+                <td><%= types[i].stock %></td>
+                <td><a href="/types/choose/<%= types[i].id %>">Choose</a></td>
+            </tr>
+        <% } %>
+    </table>
+    <br>
+    <a href="/colors">NEXT</a><br>
+</body>
+</html>
